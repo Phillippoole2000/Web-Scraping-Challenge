@@ -18,11 +18,13 @@
     <!-- lookup Jinja templating syntax -->
     <h3>Latest Mars News</h3>
     <h4>{{mars_data.News_Title}}</h4>
-    <img src="{{ Space_Image }}" alt="JPLImg">
+    <img src={{mars_data.Space_Image}} alt="JPLImg">
     {{mars_data.Mars_Table|safe}}
     <h4>{{mars_data.News_Text}}</h4>
     <h4>{{mars_data.Mars_Tweet}}</h4>
-    <img src="{{ Mars_Pics }}" alt="MarsPics">
+    {% for image in mars_data.Mars_Pics %}
+    <img src={{image.img_url}}  alt="MarsPics">
+    {% endfor %}
 
 
 

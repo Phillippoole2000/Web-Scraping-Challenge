@@ -68,9 +68,9 @@ def scrape_info():
 
     featured_image_url = soup2.find('a', id ='full_image')
     featured_image_url['data-fancybox-href']
-    image_path = featured_image_url['data-fancybox-href']
-    image_path
 
+    image_path = "https://www.jpl.nasa.gov" + featured_image_url['data-fancybox-href']
+    
     url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(url)
 
